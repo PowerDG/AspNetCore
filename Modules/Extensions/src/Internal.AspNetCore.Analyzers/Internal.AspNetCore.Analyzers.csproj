@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET Core internal use analyzers.</Description>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <PackageTags>$(PackageTags);analyzers</PackageTags>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <EnableApiCheck>false</EnableApiCheck>
+    <BuildOutputTargetFolder>analyzers/dotnet/cs/</BuildOutputTargetFolder>
+    <!-- Do not code sign this package. It is internal only. -->
+    <DisableCodeSigning>false</DisableCodeSigning>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" PrivateAssets="All" Version="$(MicrosoftCodeAnalysisCSharpWorkspacesPackageVersion)" />
+  </ItemGroup>
+
+</Project>

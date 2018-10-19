@@ -1,0 +1,14 @@
+{
+  "nonshipping": {
+    "rules": [],
+    "packages": {
+      "Microsoft.Extensions.Buffers.MemoryPool.Sources": {},
+      "Microsoft.Extensions.Buffers.Testing.Sources": {}
+    }
+  },
+  "Default": {
+    "rules": [
+      "DefaultCompositeRule"
+    ]
+  }
+}

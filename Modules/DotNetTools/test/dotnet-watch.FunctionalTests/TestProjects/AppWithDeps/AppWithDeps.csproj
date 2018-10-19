@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <OutputType>exe</OutputType>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!-- aspnet/BuildTools#662 Don't police what version of NetCoreApp we use -->
+    <NETCoreAppMaximumVersion>99.9</NETCoreAppMaximumVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dependency\Dependency.csproj" />
+  </ItemGroup>
+
+</Project>
