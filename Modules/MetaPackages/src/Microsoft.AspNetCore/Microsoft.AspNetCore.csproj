@@ -17,6 +17,8 @@
     <ProjectReference Include="..\..\..\Configuration\src\Config.UserSecrets\Config.UserSecrets.csproj" />
     <ProjectReference Include="..\..\..\Diagnostics\src\Microsoft.AspNetCore.Diagnostics\Microsoft.AspNetCore.Diagnostics.csproj" />
     <ProjectReference Include="..\..\..\Hosting\src\Microsoft.AspNetCore.Hosting\Microsoft.AspNetCore.Hosting.csproj" />
+    <ProjectReference Include="..\..\..\IISIntegration\src\Microsoft.AspNetCore.Server.IISIntegration\Microsoft.AspNetCore.Server.IISIntegration.csproj" />
+    <ProjectReference Include="..\..\..\IISIntegration\src\Microsoft.AspNetCore.Server.IIS\Microsoft.AspNetCore.Server.IIS.csproj" />
     <ProjectReference Include="..\..\..\KestrelHttpServer\src\Kestrel.Https\Kestrel.Https.csproj" />
     <ProjectReference Include="..\..\..\KestrelHttpServer\src\Kestrel\Kestrel.csproj" />
     <ProjectReference Include="..\..\..\Logging\src\Microsoft.Extensions.Logging.Configuration\Microsoft.Extensions.Logging.Configuration.csproj" />

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -21,28 +21,17 @@
 
     <PackageReference Include="System.IO.Pipelines" Version="$(SystemIOPipelinesPackageVersion)" />
     <PackageReference Include="System.Security.Principal.Windows" Version="$(SystemSecurityPrincipalWindowsPackageVersion)" />
-
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="$(MicrosoftAspNetCoreAuthenticationCorePackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="$(MicrosoftAspNetCoreHostingAbstractionsPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Connections.Abstractions" Version="$(MicrosoftAspNetCoreConnectionsAbstractionsPackageVersion)" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="$(PackageId).targets" PackagePath="build/$(TargetFramework)/" />
   </ItemGroup>
 
-  <Target Name="AddPackNativeComponents" BeforeTargets="_GetPackageFiles;GetSignedPackageFiles" Condition="$(PackNativeAssets) == 'true'">
-    <ItemGroup>
-      <None Include="%(InProcessComponents.DllLocation)" Pack="true" PackagePath="runtimes/win-%(InProcessComponents.Platform)/nativeassets/$(NativeAssetsTargetFramework)" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Hosting\src\Microsoft.AspNetCore.Hosting.Abstractions\Microsoft.AspNetCore.Hosting.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\HttpAbstractions\src\Microsoft.AspNetCore.Authentication.Core\Microsoft.AspNetCore.Authentication.Core.csproj" />
+    <ProjectReference Include="..\..\..\KestrelHttpServer\src\Connections.Abstractions\Connections.Abstractions.csproj" />
+  </ItemGroup>
 
-      <SignedPackageFile Include="%(InProcessComponents.DllLocation)" PackagePath="runtimes/win-%(InProcessComponents.Platform)/nativeassets/$(NativeAssetsTargetFramework)/%(InProcessComponents.NativeAsset).dll" Certificate="$(AssemblySigningCertName)" />
-    </ItemGroup>
-  </Target>
-
-  <Target Name="AddRunNativeComponents" BeforeTargets="AssignTargetPaths" Condition="$(PackNativeAssets) == 'true'">
-    <ItemGroup>
-      <None Include="%(RunInProcessComponents.DllLocation)" CopyToOutputDirectory="PreserveNewest" Link="%(RunInProcessComponents.NativeAsset).dll" />
-      <None Include="%(RunInProcessComponents.PdbLocation)" CopyToOutputDirectory="PreserveNewest" Link="%(RunInProcessComponents.NativeAsset).pdb" />
-    </ItemGroup>
-  </Target>
+ 
 </Project>
