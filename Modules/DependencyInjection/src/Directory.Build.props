@@ -6,7 +6,4 @@
     <PackageTags>dependencyinjection;di</PackageTags>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Internal.AspNetCore.Sdk" PrivateAssets="All" Version="$(InternalAspNetCoreSdkPackageVersion)" />
-  </ItemGroup>
-</Project>
+ </Project>

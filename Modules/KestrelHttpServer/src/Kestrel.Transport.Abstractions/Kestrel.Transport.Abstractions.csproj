@@ -10,6 +10,7 @@
     <NoWarn>CS1570;CS1571;CS1572;CS1573;CS1574;CS1591;$(NoWarn)</NoWarn>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseSystemMemory>false</UseSystemMemory>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

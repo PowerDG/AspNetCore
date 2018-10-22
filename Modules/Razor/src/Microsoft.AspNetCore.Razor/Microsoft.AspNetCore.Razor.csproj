@@ -13,6 +13,7 @@ Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper</Description>
 
     <!-- Required to implement an HtmlEncoder -->
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

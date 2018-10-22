@@ -5,8 +5,4 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageTags>configuration</PackageTags>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Internal.AspNetCore.Sdk" PrivateAssets="All" Version="$(InternalAspNetCoreSdkPackageVersion)" />
-  </ItemGroup>
 </Project>

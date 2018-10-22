@@ -8,6 +8,7 @@
     <PackageTags>aspnetcore;aspnetcoremvc;cshtml;razor</PackageTags>
     <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
     <Serviceable>true</Serviceable>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +19,6 @@
     <ProjectReference Include="..\..\..\Razor\src\Microsoft.CodeAnalysis.Razor\Microsoft.CodeAnalysis.Razor.csproj" />
     <ProjectReference Include="..\Microsoft.AspNetCore.Mvc.ViewFeatures\Microsoft.AspNetCore.Mvc.ViewFeatures.csproj" />
 
-    <PackageReference Include="Microsoft.CodeAnalysis.Razor" Version="$(MicrosoftCodeAnalysisRazorPackageVersion)" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="$(MicrosoftCodeAnalysisCSharpPackageVersion)" />
   </ItemGroup>
 

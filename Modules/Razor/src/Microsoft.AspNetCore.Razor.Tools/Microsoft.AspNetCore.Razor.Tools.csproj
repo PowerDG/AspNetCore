@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <Description>Razor is a markup syntax for adding server-side logic to web pages. This assembly contains infrastructure supporting Razor MSBuild integration.</Description>
@@ -10,6 +10,7 @@
     <!-- This is not a package, it is part of Microsoft.AspNetCore.Razor.Design. -->
     <IsPackable>false</IsPackable>
     <EnableApiCheck>false</EnableApiCheck>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

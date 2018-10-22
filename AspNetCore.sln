@@ -43,8 +43,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Cachin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Caching.StackExchangeRedis", "Modules\Caching\src\Microsoft.Extensions.Caching.StackExchangeRedis\Microsoft.Extensions.Caching.StackExchangeRedis.csproj", "{EB36BBBE-952A-406D-9D0A-83D812D562DB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{DFAE7C3E-1F3D-48CF-BF5C-6DC41B54248E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Hosting", "Modules\Hosting\src\Microsoft.AspNetCore.Hosting\Microsoft.AspNetCore.Hosting.csproj", "{562AE704-781F-4174-82C7-BA5C17A07D82}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Hosting.Abstractions", "Modules\Hosting\src\Microsoft.AspNetCore.Hosting.Abstractions\Microsoft.AspNetCore.Hosting.Abstractions.csproj", "{A33D19D4-BDCF-46FC-9D5B-49C6EC6948CB}"
@@ -204,16 +202,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Mvc", "Modules\Mvc\src\Microsoft.AspNetCore.Mvc\Microsoft.AspNetCore.Mvc.csproj", "{C355E1ED-9097-4D6A-855E-A3B9AF81CB4D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Mvc.Analyzers", "Modules\Mvc\src\Microsoft.AspNetCore.Mvc.Analyzers\Microsoft.AspNetCore.Mvc.Analyzers.csproj", "{B16696EC-7700-40B2-BE70-50F376FC2EB6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.AccessTokenValidation", "..\..\GitHub\NetCore\Third Party Library\IdentityServer4.AccessTokenValidation\src\IdentityServer4.AccessTokenValidation.csproj", "{ACB8D623-54E6-44E0-94E4-056E329D3AB5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{177298C8-D4BF-46EE-AA28-5E1D21425AA0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "..\IdentityServer4.Samples\Quickstarts\1_ClientCredentials\src\Api\Api.csproj", "{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "..\IdentityServer4.Samples\Quickstarts\1_ClientCredentials\src\Client\Client.csproj", "{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickstartIdentityServer", "..\IdentityServer4.Samples\Quickstarts\1_ClientCredentials\src\QuickstartIdentityServer\QuickstartIdentityServer.csproj", "{55A36FCA-A005-4D36-83AF-29DF271B0147}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Mvc.ApiExplorer", "Modules\Mvc\src\Microsoft.AspNetCore.Mvc.ApiExplorer\Microsoft.AspNetCore.Mvc.ApiExplorer.csproj", "{5DA752DC-3F1E-4CFD-85B4-292E53E49777}"
 EndProject
@@ -1577,70 +1565,6 @@ Global
 		{B16696EC-7700-40B2-BE70-50F376FC2EB6}.uap-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B16696EC-7700-40B2-BE70-50F376FC2EB6}.uap-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B16696EC-7700-40B2-BE70-50F376FC2EB6}.uap-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Unix-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Unix-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Unix-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Unix-Release|Any CPU.Build.0 = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.netcoreapp-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.uap-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.uap-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.uap-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5}.uap-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Unix-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Unix-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Unix-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Unix-Release|Any CPU.Build.0 = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.netcoreapp-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.uap-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.uap-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.uap-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA}.uap-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Unix-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Unix-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Unix-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Unix-Release|Any CPU.Build.0 = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.netcoreapp-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.uap-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.uap-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.uap-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F}.uap-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Unix-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Unix-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Unix-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Unix-Release|Any CPU.Build.0 = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.netcoreapp-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.uap-Windows_NT-Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.uap-Windows_NT-Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.uap-Windows_NT-Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55A36FCA-A005-4D36-83AF-29DF271B0147}.uap-Windows_NT-Release|Any CPU.Build.0 = Release|Any CPU
 		{5DA752DC-3F1E-4CFD-85B4-292E53E49777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5DA752DC-3F1E-4CFD-85B4-292E53E49777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA752DC-3F1E-4CFD-85B4-292E53E49777}.netcoreapp-Unix-Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -2016,7 +1940,6 @@ Global
 		{355A3237-7CA9-4853-A465-95BB5585BF1F} = {0F8BE0A0-8CF0-4889-BFC0-E51F3E062A69}
 		{85C724F4-3DF3-4BF5-AD96-4C90913189ED} = {0F8BE0A0-8CF0-4889-BFC0-E51F3E062A69}
 		{EB36BBBE-952A-406D-9D0A-83D812D562DB} = {0F8BE0A0-8CF0-4889-BFC0-E51F3E062A69}
-		{DFAE7C3E-1F3D-48CF-BF5C-6DC41B54248E} = {7EDD58BC-8BE7-4C96-B924-8B5BB4B73E73}
 		{562AE704-781F-4174-82C7-BA5C17A07D82} = {45608376-0ABD-4F83-97B8-BF6304111AFD}
 		{A33D19D4-BDCF-46FC-9D5B-49C6EC6948CB} = {45608376-0ABD-4F83-97B8-BF6304111AFD}
 		{C0DF40C8-2102-4167-94E7-ABA5073AEB58} = {45608376-0ABD-4F83-97B8-BF6304111AFD}
@@ -2097,10 +2020,6 @@ Global
 		{57F00BDA-81F2-4170-AC2C-DF38B1CB3F9B} = {AEA829E0-4EC8-483D-B79E-F0FF5F597F44}
 		{C355E1ED-9097-4D6A-855E-A3B9AF81CB4D} = {AEA829E0-4EC8-483D-B79E-F0FF5F597F44}
 		{B16696EC-7700-40B2-BE70-50F376FC2EB6} = {AEA829E0-4EC8-483D-B79E-F0FF5F597F44}
-		{ACB8D623-54E6-44E0-94E4-056E329D3AB5} = {177298C8-D4BF-46EE-AA28-5E1D21425AA0}
-		{234D1E3A-C4C7-4D9D-B1B8-46FA1FCB46CA} = {177298C8-D4BF-46EE-AA28-5E1D21425AA0}
-		{DD0DC414-B8E6-44ED-96EA-2E6372BEB01F} = {177298C8-D4BF-46EE-AA28-5E1D21425AA0}
-		{55A36FCA-A005-4D36-83AF-29DF271B0147} = {177298C8-D4BF-46EE-AA28-5E1D21425AA0}
 		{5DA752DC-3F1E-4CFD-85B4-292E53E49777} = {AEA829E0-4EC8-483D-B79E-F0FF5F597F44}
 		{12178678-88FB-471B-8F69-D81178ECE4AA} = {7EDD58BC-8BE7-4C96-B924-8B5BB4B73E73}
 		{115240EE-8B56-4A33-AC02-72ACD88545B3} = {12178678-88FB-471B-8F69-D81178ECE4AA}

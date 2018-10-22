@@ -4,6 +4,7 @@
     <Description>ASP.NET Core design time hosting infrastructure for the Razor view engine.</Description>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageTags>$(PackageTags);aspnetcoremvc</PackageTags>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
