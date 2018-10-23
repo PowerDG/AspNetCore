@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\build\common.props" />
+
+  <PropertyGroup>
+    <AssemblyName>Microsoft.IdentityModel.Protocols</AssemblyName>
+    <Description>Provides base protocol support for OpenIdConnect and WsFederation.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>Microsoft.IdentityModel.Protocols</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageTags>.NET;Windows;Authentication;Identity;OpenIdConnect;WsFederation</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.IdentityModel.Logging\Microsoft.IdentityModel.Logging.csproj" />
+    <ProjectReference Include="..\Microsoft.IdentityModel.Tokens\Microsoft.IdentityModel.Tokens.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Specialized" Version="4.3.0-*" />
+    <PackageReference Include="System.Diagnostics.Contracts" Version="4.3.0-*" />
+    <PackageReference Include="System.Net.Http" Version="4.3.0-*" />
+  </ItemGroup>
+
+</Project>

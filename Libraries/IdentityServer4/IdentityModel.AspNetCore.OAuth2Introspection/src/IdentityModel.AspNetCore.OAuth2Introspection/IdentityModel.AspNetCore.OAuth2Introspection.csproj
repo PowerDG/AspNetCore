@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>ASP.NET Core 2.0 Middleware for validating tokens using OAuth 2.0 introspection</Description>
+    <VersionPrefix>3.4.1</VersionPrefix>
+    <!--<VersionSuffix>preview1</VersionSuffix>-->
+    <Authors>Dominick Baier;Brock Allen</Authors>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <PackageId>IdentityModel.AspNetCore.OAuth2Introspection</PackageId>
+    <PackageTags>OAuth2;OAuth 2.0;Introspection;Security;Identity;IdentityServer</PackageTags>
+    <PackageIconUrl>https://identityserver.github.io/Documentation/assets/images/icons/IDmodel_icon128.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/IdentityModel/IdentityModel.AspNetCore.OAuth2Introspection</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/IdentityModel/IdentityModel.AspNetCore.OAuth2Introspection/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/identitymodel/identitymodel.aspnetcore.oauth2introspection</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Declare that the Repository URL can be published to NuSpec -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!-- Embed source files that are not tracked by the source control manager to the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- Include PDB in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Modules\Caching\src\Microsoft.Extensions.Caching.Memory\Microsoft.Extensions.Caching.Memory.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\HttpAbstractions\src\Microsoft.AspNetCore.Http.Abstractions\Microsoft.AspNetCore.Http.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\Security\src\Microsoft.AspNetCore.Authentication\Microsoft.AspNetCore.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\IdentityModel2\src\IdentityModel.csproj" />
+  </ItemGroup>
+</Project>

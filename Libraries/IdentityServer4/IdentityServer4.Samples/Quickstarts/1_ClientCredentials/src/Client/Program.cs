@@ -39,6 +39,7 @@ namespace Client
             // call api
             var client = new HttpClient();
             client.SetBearerToken(tokenResponse.AccessToken);
+            client.Timeout = new TimeSpan(1, 1, 1);
 
             var response = await client.GetAsync("http://localhost:4042/identity");
             if (!response.IsSuccessStatusCode)

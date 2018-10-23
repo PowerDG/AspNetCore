@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <Import Project="..\..\build\common.props" />
+    
+  <PropertyGroup>
+    <AssemblyName>Microsoft.IdentityModel.Logging</AssemblyName>
+    <Description>Includes Event Source based logging support.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>Microsoft.IdentityModel.Logging</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageTags>.NET;Windows;Authentication;Identity;Logging</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+ <ItemGroup>
+    <PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
+    <PackageReference Include="System.Globalization" Version="4.3.0" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+  </ItemGroup>
+</Project>
