@@ -11,14 +11,17 @@ Microsoft.AspNetCore.Mvc.IActionResult</Description>
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup Label="Sources packages">
-    <PackageReference Include="Microsoft.Extensions.ClosedGenericMatcher.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsClosedGenericMatcherSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.HashCodeCombiner.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsHashCodeCombinerSourcesPackageVersion)" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\HttpAbstractions\src\Microsoft.Net.Http.Headers\Microsoft.Net.Http.Headers.csproj" />
     <ProjectReference Include="..\..\..\Routing\src\Microsoft.AspNetCore.Routing.Abstractions\Microsoft.AspNetCore.Routing.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.ClosedGenericMatcher.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ClosedGenericMatcher.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.HashCodeCombiner.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.HashCodeCombiner.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -17,9 +17,6 @@
   <Import Project="..\..\build\assets.props" />
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.HttpSys.Sources" PrivateAssets="All" Version="$(MicrosoftAspNetCoreHttpSysSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Buffers.MemoryPool.Sources" Version="$(MicrosoftExtensionsBuffersMemoryPoolSourcesPackageVersion)" PrivateAssets="All" />
-
     <PackageReference Include="System.IO.Pipelines" Version="$(SystemIOPipelinesPackageVersion)" />
     <PackageReference Include="System.Security.Principal.Windows" Version="$(SystemSecurityPrincipalWindowsPackageVersion)" />
   </ItemGroup>
@@ -34,5 +31,12 @@
     <ProjectReference Include="..\..\..\KestrelHttpServer\src\Connections.Abstractions\Connections.Abstractions.csproj" />
   </ItemGroup>
 
- 
+  <ItemGroup>
+    <Compile Include="..\..\..\HttpSysServer\shared\Microsoft.AspNetCore.HttpSys.Sources\**\*.cs">
+      <Link>Microsoft.AspNetCore.HttpSys.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\KestrelHttpServer\shared\Microsoft.Extensions.Buffers.MemoryPool.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.Buffers.MemoryPool.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
 </Project>

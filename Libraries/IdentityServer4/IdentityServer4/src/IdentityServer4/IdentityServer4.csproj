@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
+    <VersionPrefix>2.2.0</VersionPrefix>
+    <!--<VersionSuffix>rc1-update1</VersionSuffix>-->
+    <Authors>Brock Allen;Dominick Baier</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>IdentityServer4</AssemblyName>
+    <PackageId>IdentityServer4</PackageId>
+    <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/IdentityServer/Artwork/master/Logos/IDserver_icon128.jpg</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/IdentityServer/IdentityServer4</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/IdentityServer/IdentityServer4/blob/release/LICENSE</PackageLicenseUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="3.6.1" />
+    
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.2.1" />
+    <PackageReference Include="System.Security.Cryptography.Cng" Version="4.4.0" />
+    
+    <PackageReference Include="SourceLink.Embed.AllSourceFiles" Version="2.8.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Modules\Caching\src\Microsoft.Extensions.Caching.Memory\Microsoft.Extensions.Caching.Memory.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\CORS\src\Microsoft.AspNetCore.Cors\Microsoft.AspNetCore.Cors.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\Logging\src\Microsoft.Extensions.Logging\Microsoft.Extensions.Logging.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\Options\src\Microsoft.Extensions.Options.ConfigurationExtensions\Microsoft.Extensions.Options.ConfigurationExtensions.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\Security\src\Microsoft.AspNetCore.Authentication.Cookies\Microsoft.AspNetCore.Authentication.Cookies.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\Security\src\Microsoft.AspNetCore.Authentication.OpenIdConnect\Microsoft.AspNetCore.Authentication.OpenIdConnect.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Modules\Security\src\Microsoft.AspNetCore.Authentication\Microsoft.AspNetCore.Authentication.csproj" />
+  </ItemGroup>
+</Project>

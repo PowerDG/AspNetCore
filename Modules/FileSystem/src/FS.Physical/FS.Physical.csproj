@@ -17,9 +17,9 @@
     <ProjectReference Include="..\FS.Abstractions\FS.Abstractions.csproj" />
     <ProjectReference Include="..\FS.Globbing\FS.Globbing.csproj" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.NonCapturingTimer.Sources" Version="$(MicrosoftExtensionsNonCapturingTimerSourcesPackageVersion)" PrivateAssets="All" />
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.NonCapturingTimer.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.NonCapturingTimer.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
   </ItemGroup>
-
 </Project>

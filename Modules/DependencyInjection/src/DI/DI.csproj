@@ -25,7 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.TypeNameHelper.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsTypeNameHelperSourcesPackageVersion)" />
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.TypeNameHelper.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.TypeNameHelper.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
   </ItemGroup>
 
 </Project>

@@ -17,11 +17,12 @@ Microsoft.AspNetCore.Razor.TagHelpers.ITagHelper</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.HashCodeCombiner.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsHashCodeCombinerSourcesPackageVersion)" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\..\HtmlAbstractions\src\Microsoft.AspNetCore.Html.Abstractions\Microsoft.AspNetCore.Html.Abstractions.csproj" />
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.HashCodeCombiner.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.HashCodeCombiner.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
 </Project>

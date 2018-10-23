@@ -15,14 +15,14 @@ Microsoft.AspNetCore.Mvc.ViewComponent</Description>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Antiforgery\src\Microsoft.AspNetCore.Antiforgery\Microsoft.AspNetCore.Antiforgery.csproj" />
+    <ProjectReference Include="..\..\..\Diagnostics\src\Microsoft.AspNetCore.Diagnostics.Abstractions\Microsoft.AspNetCore.Diagnostics.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\HtmlAbstractions\src\Microsoft.AspNetCore.Html.Abstractions\Microsoft.AspNetCore.Html.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\HtmlAbstractions\src\Microsoft.Extensions.WebEncoders\Microsoft.Extensions.WebEncoders.csproj" />
     <ProjectReference Include="..\Microsoft.AspNetCore.Mvc.Core\Microsoft.AspNetCore.Mvc.Core.csproj" />
     <ProjectReference Include="..\Microsoft.AspNetCore.Mvc.DataAnnotations\Microsoft.AspNetCore.Mvc.DataAnnotations.csproj" />
     <ProjectReference Include="..\Microsoft.AspNetCore.Mvc.Formatters.Json\Microsoft.AspNetCore.Mvc.Formatters.Json.csproj" />
 
-    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="$(MicrosoftAspNetCoreAntiforgeryPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.Abstractions" Version="$(MicrosoftAspNetCoreDiagnosticsAbstractionsPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="$(MicrosoftAspNetCoreHtmlAbstractionsPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.WebEncoders" Version="$(MicrosoftExtensionsWebEncodersPackageVersion)" />
     <PackageReference Include="Newtonsoft.Json.Bson" Version="$(NewtonsoftJsonBsonPackageVersion)" />
   </ItemGroup>
 

@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.CommandLineUtils.Sources" Version="$(MicrosoftExtensionsCommandLineUtilsSourcesPackageVersion)" />
     <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonPackageVersion)" />
   </ItemGroup>
 
@@ -31,6 +30,11 @@
     <ProjectReference Include="..\Microsoft.CodeAnalysis.Razor\Microsoft.CodeAnalysis.Razor.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.CommandLineUtils.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.CommandLineUtils.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
   <!-- This makes it so that the runtimeconfig.json is included as part of the build output of the project that references this project. -->
   <Target Name="PreserveRuntimeConfig" BeforeTargets="GetCopyToOutputDirectoryItems">
     <ItemGroup>

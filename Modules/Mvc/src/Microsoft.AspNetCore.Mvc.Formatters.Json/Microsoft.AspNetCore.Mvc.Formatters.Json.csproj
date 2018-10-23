@@ -10,9 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\JsonPatch\src\Microsoft.AspNetCore.JsonPatch\Microsoft.AspNetCore.JsonPatch.csproj" />
     <ProjectReference Include="..\Microsoft.AspNetCore.Mvc.Core\Microsoft.AspNetCore.Mvc.Core.csproj" />
+  </ItemGroup>
 
-    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="$(MicrosoftAspNetCoreJsonPatchPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.ClosedGenericMatcher.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsClosedGenericMatcherSourcesPackageVersion)" />
+  <ItemGroup>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.ClosedGenericMatcher.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ClosedGenericMatcher.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
   </ItemGroup>
 </Project>

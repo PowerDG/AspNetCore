@@ -24,11 +24,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.RazorViews.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsRazorViewsSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.StackTrace.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsStackTraceSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.TypeNameHelper.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsTypeNameHelperSourcesPackageVersion)" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="$(SystemDiagnosticsDiagnosticSourcePackageVersion)" />
     <PackageReference Include="System.Reflection.Metadata" Version="$(SystemReflectionMetadataPackageVersion)" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.RazorViews.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.RazorViews.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.StackTrace.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.StackTrace.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.TypeNameHelper.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.TypeNameHelper.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
+  
 </Project>

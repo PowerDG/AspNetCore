@@ -36,17 +36,37 @@ Microsoft.AspNetCore.Mvc.RouteAttribute</Description>
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="$(SystemThreadingTasksExtensionsPackageVersion)" />
   </ItemGroup>
 
-  <ItemGroup Label="Sources packages">
-    <PackageReference Include="Microsoft.AspNetCore.ChunkingCookieManager.Sources" PrivateAssets="All" Version="$(MicrosoftAspNetCoreChunkingCookieManagerSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.CopyOnWriteDictionary.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsCopyOnWriteDictionarySourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.ObjectMethodExecutor.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsObjectMethodExecutorSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.ParameterDefaultValue.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsParameterDefaultValueSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.PropertyActivator.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsPropertyActivatorSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.PropertyHelper.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsPropertyHelperSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.RangeHelper.Sources" PrivateAssets="All" Version="$(MicrosoftAspNetCoreRangeHelperSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.SecurityHelper.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsSecurityHelperSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.TypeNameHelper.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsTypeNameHelperSourcesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.ValueStopwatch.Sources" PrivateAssets="All" Version="$(MicrosoftExtensionsValueStopwatchSourcesPackageVersion)" />
+  <ItemGroup>
+    <Compile Include="..\..\..\Security\shared\Microsoft.AspNetCore.ChunkingCookieManager.Sources\**\*.cs">
+      <Link>Microsoft.AspNetCore.ChunkingCookieManager.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.CopyOnWriteDictionary.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.CopyOnWriteDictionary.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.ObjectMethodExecutor.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ObjectMethodExecutor.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.PropertyActivator.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.PropertyActivator.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.PropertyHelper.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.PropertyHelper.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.SecurityHelper.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.SecurityHelper.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.TypeNameHelper.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.TypeNameHelper.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\Extensions\shared\Microsoft.Extensions.ValueStopwatch.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ValueStopwatch.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\DependencyInjection\shared\Microsoft.Extensions.ParameterDefaultValue.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ParameterDefaultValue.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\StaticFiles\shared\Microsoft.AspNetCore.RangeHelper.Sources\**\*.cs">
+      <Link>Microsoft.AspNetCore.RangeHelper.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
   </ItemGroup>
-
+  
   </Project>

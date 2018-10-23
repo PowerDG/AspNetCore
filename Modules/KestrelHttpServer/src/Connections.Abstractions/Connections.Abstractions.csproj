@@ -13,11 +13,17 @@
 
   <ItemGroup>
     <PackageReference Include="System.IO.Pipelines" Version="$(SystemIOPipelinesPackageVersion)" />
-    <PackageReference Include="Microsoft.Extensions.ActivatorUtilities.Sources" Version="$(MicrosoftExtensionsActivatorUtilitiesSourcesPackageVersion)" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\HttpAbstractions\src\Microsoft.AspNetCore.Http.Features\Microsoft.AspNetCore.Http.Features.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Include="..\..\..\DependencyInjection\shared\Microsoft.Extensions.ActivatorUtilities.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ActivatorUtilities.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+    <Compile Include="..\..\..\DependencyInjection\shared\Microsoft.Extensions.ParameterDefaultValue.Sources\**\*.cs">
+      <Link>Microsoft.Extensions.ParameterDefaultValue.Sources\%(FileName)%(Extension)</Link>
+    </Compile>
+  </ItemGroup>
 </Project>
