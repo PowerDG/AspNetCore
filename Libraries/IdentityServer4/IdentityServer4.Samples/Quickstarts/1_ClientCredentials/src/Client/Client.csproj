@@ -5,4 +5,8 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\IdentityModel2\src\IdentityModel.csproj" />
+  </ItemGroup>
+
 </Project>

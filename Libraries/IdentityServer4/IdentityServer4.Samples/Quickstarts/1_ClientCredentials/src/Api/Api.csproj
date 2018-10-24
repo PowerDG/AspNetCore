@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\..\Modules\MetaPackages\src\Microsoft.AspNetCore\Microsoft.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\..\IdentityServer4.AccessTokenValidation\src\IdentityServer4.AccessTokenValidation.csproj" />
   </ItemGroup>
 
 </Project>
